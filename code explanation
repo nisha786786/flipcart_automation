@@ -11,6 +11,8 @@ Search for Product: Use the search bar to search for "suit for women".
 
 fetch all image src: Print no. of src image and fetch all image src and print
 
+CSV file: save all extract img src in csv file
+
 Select the Ninth Product: Select and click on the ninth product in the search results.
 
 Add to Cart: After switching to the new tab where the product page is opened, add the product to the cart.
