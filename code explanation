@@ -1,0 +1,28 @@
+Explanation of the Script:
+Set up WebDriver: Initialize the Selenium WebDriver for Chrome.
+
+Navigate to Flipkart: Go to Flipkart website
+
+Mouse Hover and Click:  Hover over the "Fashion" menu.
+                        Hover over the "Women" submenu.
+                        Click on "Women's Heels".
+
+Search for Product: Use the search bar to search for "suit for women".
+
+fetch all image src: Print no. of src image and fetch all image src and print
+
+Select the Ninth Product: Select and click on the ninth product in the search results.
+
+Add to Cart: After switching to the new tab where the product page is opened, add the product to the cart.
+
+Switch Tabs and Go to Cart: Switch back to the first tab and click on the cart icon.
+
+Fetch Cart Details: Extract and print the name and price of the product in the cart.
+
+verify product added on cart or not:
+
+Remove Product: Click the remove button and handle the confirmation pop-up to remove the product from the cart.
+
+Verify Cart is Empty: Check if the cart is empty and confirm that the product was successfully removed.
+
+Close Browser: Close the browser window.
