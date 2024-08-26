@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
+import csv
 from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_experimental_option("detach", True)
@@ -35,10 +36,22 @@ WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//img
 allproduct = driver.find_elements(By.XPATH,'//img[@class="_53J4C-"]')
 print("no. of src img",len(allproduct))
 
+# Create an empty list to store data
+link_store = []
+
 # fetch all source  src of image
 for i in allproduct:
     val = i.get_attribute('src')
     print(val)
+    if val:
+        link_store.append(val)
+
+# Save the links into a CSV file
+with open('img_links.csv', 'w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(['All img of Links'])  # Write the header
+    for val in link_store:
+        writer.writerow([val])
 
 # scrolling page 5 times by page down key
 for _ in range(5):
